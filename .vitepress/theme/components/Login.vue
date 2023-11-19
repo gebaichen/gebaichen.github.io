@@ -44,7 +44,7 @@
           <el-switch v-model="remember"/>
         </el-form-item>
         <el-form-item>
-          <el-button round  class="w-[250px]" type="primary" @click="onSubmit">登 录</el-button>
+          <el-button round class="w-[250px]" type="primary" @click="onSubmit">登 录</el-button>
         </el-form-item>
       </el-form>
     </el-col>
@@ -52,36 +52,39 @@
 </template>
 
 <script setup>
-import {reactive, ref, watch, onMounted} from "vue"
-import {ElNotification} from "element-plus";
+import {reactive, ref, watch, onMounted} from 'vue';
+import {ElNotification} from 'element-plus';
+import {useData} from 'vitepress';
 
-
+const {theme} = useData();
+const localUrl = theme.value.localUrl;
+const loginUrl = localUrl + '/api/v2/notes/login';
 // 定义登录表单的数据
 const form = reactive({
-  mobile: "",
-  password: ""
-})
+  mobile: '',
+  password: '',
+});
 
 // 表单的引用对象
-const formRef = ref(null)
+const formRef = ref(null);
 
 // 校验规则
 const rules = {
   mobile: [
     {
       required: true,
-      message: "用户名不能为空",
-      trigger: "blur"
-    }
+      message: '用户名不能为空',
+      trigger: 'blur',
+    },
   ],
   password: [
     {
       required: true,
-      message: "密码不能为空",
-      trigger: "blur"
-    }
-  ]
-}
+      message: '密码不能为空',
+      trigger: 'blur',
+    },
+  ],
+};
 // 点击登录的事件
 // localStorage.setItem('jwt', 'Bearer xasdjssalsdfsadfasdf')
 // location.href = '/'
@@ -90,55 +93,57 @@ const onSubmit = () => {
   // 实现校验
   formRef.value.validate((valid) => {
     if (!valid) {
-      return false
+      return false;
     }
-    fetch(`/login`,
+    fetch(loginUrl,
         {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(form)
-        }
+          body: JSON.stringify(form),
+        },
     ).then(response => response.json()).then(ret => {
-      console.log(ret)
-      if (ret.status === 'success') {
+      console.log(ret);
+      if (ret.code === 0) {
         ElNotification({
           title: '成功',
           message: '登录成功，2s 之后进行跳转',
           type: 'success',
-        })
-        setTimeout(function () {
-          localStorage.setItem('jwt', 'Bearer xasdjssalsdfsadfasdf')
-          location.href = ret?.next ? ret.next : '/'
-        }, 2000)
+        });
+        setTimeout(function() {
+          localStorage.setItem('jwt', ret.access_token);
+          // console.log(ret.data);
+          localStorage.setItem('user', JSON.stringify(ret.data));
+          location.href = ret?.next ? ret.next : '/';
+        }, 2000);
       } else {
         ElNotification({
           title: '失败',
           message: ret.message,
           type: 'error',
-        })
+        });
       }
     }).catch(error => {
       ElNotification({
         title: '错误',
         message: '网络有问题或者是服务器出问题，请联系管理员',
         type: 'error',
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
 
-const remember = ref(true)
+const remember = ref(true);
 watch(form, (old) => {
   if (remember.value) {
-    localStorage.setItem('info', JSON.stringify(form))
+    localStorage.setItem('info', JSON.stringify(form));
   } else {
-    localStorage.removeItem('info')
+    localStorage.removeItem('info');
   }
-})
+});
 
 onMounted(() => {
-  Object.assign(form, JSON.parse(localStorage.getItem('info') || '{}'))
-})
+  Object.assign(form, JSON.parse(localStorage.getItem('info') || '{}'));
+});
 </script>
 
 <style scoped>

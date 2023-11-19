@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build --outDir dist/html/",
     "preview": "vitepress preview --port 8080"
   },
   "type": "module",
@@ -21,7 +21,7 @@
   "keywords": [],
   "dependencies": {
     "element-plus": "^2.4.2",
-    "vitepress": "1.0.0-rc.24",
-    "vue": "^3.3.7"
+    "vitepress": "1.0.0-rc.27",
+    "vue": "^3.3.8"
   }
 }
