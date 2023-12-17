@@ -5,7 +5,7 @@ export default defineConfig({
     title: 'QuqiNotes',
     lang: 'zh',
     description: '一个文档网站',
-    // cacheDir: '.vitepress/cache',
+    outDir:"dist/html/",
     lastUpdated: true,
     head: [['link', {rel: 'icon', href: '/logo.png'}]],
     themeConfig: {
@@ -14,7 +14,6 @@ export default defineConfig({
         outlineTitle: '目录',
         outline: 'deep',
         posts: await getPosts(6),
-        outDir:"../dist/html",
         comment: {
             repo: 'gebaichen/quqinotes',
             themes: 'github-light',
