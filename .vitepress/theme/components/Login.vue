@@ -2,12 +2,12 @@
   <el-row class="login-container">
     <el-col :lg="16" :md="12" class="left">
       <div>
-        <div>曲奇文档 Quqi Notes</div>
+        <div>Quqi Notes</div>
         <div></div>
       </div>
     </el-col>
     <el-col :lg="8" :md="12" class="right">
-      <h2 class="title">欢迎回来</h2>
+      <h2 class="title" style="color: #3c3c43">欢迎回来</h2>
       <div>
         <span class="line"></span>
         <span>账号密码登录</span>

@@ -3,6 +3,7 @@ date: 2023.8.20
 title: 2023上半年总结
 tags:
   - 总结
+  - 思考
 description: 总结上半年接触到的技术和感受
 link: /posts/first-half-2023-summarize.html
 ---

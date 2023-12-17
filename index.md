@@ -7,7 +7,7 @@ titleTemplate: 一个有关于学习的文档网站
 hero:
   name: 曲奇文档 Quqi Notes
   text: <br>
-  tagline: Nothing is difficult if you put your heart into it.
+  tagline: Nothing is difficult if you put your heart into it.<br>Where there is a will, there is a way. 
   actions:
     - theme: brand cta video slide-enter
       text: 开始学习
