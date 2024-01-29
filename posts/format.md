@@ -116,4 +116,96 @@ isort.file("pythonfile.py")
 
 ## pre-commit
 
-> https://blog.csdn.net/kiscon/article/details/115399290
+> https://pre-commit.com/
+
+### 安装
+
+::: code-group
+
+```shell[pip]
+pip install pre-commit
+```
+
+```shell[poetry]
+poetry add pre-commit
+```
+
+:::
+
+### 添加配置
+
+创建`.pre-commit-config.yaml`文件
+::: code-group
+
+```yaml[.pre-commit-config.yaml]
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: ["--profile", "black", "--filter-files"]
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+```
+
+:::
+
+### 安装钩子
+
+```shell
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+```
+
+安装 git hook 之后，当在运行 pre-commit 提交时，将自动校验 pre-commit 的规则。
+
+## 使用commitizen校验提交
+
+### 安装
+
+::: code-group
+
+```shell[pip]
+pip install commitizen
+```
+
+```shell[poetry]
+poetry add commitizen
+```
+
+:::
+
+### 初始化
+
+```shell
+cz init
+# 出现选择配置文件时选择默认的就好
+```
+
+### 使用提交代码
+
+```shell
+cz init
+```
+
+#### 类型
+
+| 操作            | 说明                                                                           |
+|:--------------|:-----------------------------------------------------------------------------|
+| feat          | 新功能（A new feature)                                                           |
+| fix           | 修复bug (A bug fix)                                                            |
+| improvement   | 对当前功能的改进（An improvement to a current feature)                                |
+| docs          | 仅包含文档的修改（Documentation only changes)                                         |
+| style         | 格式化变动，不影响代码逻辑。比如清除多余空白，删除分号 等                                                |
+| refactor      | 重构，即不是新增功能，也不是修改bug的代码变动                                                     |
+| perf          | 提高性能的修改（A code change that improves performance)                             |
+| test          | 添加或修改测试代码(Adding missing tests or correcting existing tests)                 |
+| bui1d         | 构建工具或外部依赖包的修改。比如更新依赖包的版本等 ( Changes that affect the bui1d system or externa1 |
+| dependencies) |                                                                              |
+| ci            | 持续集成的配置文件或脚本的修改（ changes to our cI configuration files and scripts)          |
+| chore         | 杂项。其它不修改源代码与测试代码的修改( other changes that don't modify src or test files)      |
+| revert        | 撤销某次提交( Reverts aprevious commit)                                            |

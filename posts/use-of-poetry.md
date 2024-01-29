@@ -252,3 +252,7 @@ poetry install
 
 ## 更多
 更多的用法可以详细查看：[使用 Python Poetry 进行依赖项管理（翻译）](https://muzing.top/posts/3fa905f9/)
+## 换源
+```shell
+poetry source add tsinghua https://pypi.tuna.tsinghua.edu.cn/simple
+```
