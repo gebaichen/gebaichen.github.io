@@ -29,5 +29,3 @@ link: /flask/flask-tuozhan.html
 - [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/)：简单而可扩展的管理接口的框架
 - <a href="/flask/flask-limiter.html">Flask-Limiter：限制访问频率</a>
 
-这些插件不能每一个都去找教程，在百度，谷歌上搜索用法，那都不全，要全就要去看官方文档
-也就是[文档学习法](/posts/document-learn-method.html)

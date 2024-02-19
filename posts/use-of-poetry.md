@@ -255,4 +255,7 @@ poetry install
 ## 换源
 ```shell
 poetry source add tsinghua https://pypi.tuna.tsinghua.edu.cn/simple
+poetry source add tencentyun https://mirrors.cloud.tencent.com/pypi/simple
+# 服务器
+poetry source add tencentyun https://mirrors.tencentyun.com/pypi/simple
 ```
