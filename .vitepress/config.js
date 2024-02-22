@@ -187,7 +187,7 @@ function flaskSideBar() {
                     {text: 'cdrom', link: '/pygame/cdrom.html'},
                     {text: 'Color', link: '/pygame/Color.html'},
                     {text: 'cursors', link: '/pygame/cursors.html'},
-                    {text: 'display', link: '/pygame/BufferProxy.html'},
+                    {text: 'display', link: '/pygame/display.html'},
                     {text: 'draw', link: '/pygame/draw.html'},
                     {text: 'event', link: '/pygame/event.html'},
                     {text: 'font', link: '/pygame/font.html'},
