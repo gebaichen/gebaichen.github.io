@@ -21,7 +21,7 @@
   "keywords": [],
   "dependencies": {
     "element-plus": "^2.4.2",
-    "vitepress": "1.0.0-rc.27",
+    "vitepress": "^1.0.0-rc.44",
     "vue": "^3.3.8"
   }
 }

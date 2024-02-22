@@ -5,7 +5,7 @@ export default defineConfig({
     title: 'QuqiNotes',
     lang: 'zh',
     description: '一个文档网站',
-    outDir:"dist/html/",
+    outDir: "dist/dist",
     lastUpdated: true,
     head: [['link', {rel: 'icon', href: '/logo.png'}]],
     themeConfig: {
@@ -47,7 +47,8 @@ export default defineConfig({
             {text: '关于', link: '/about.html'},
             {
                 text: '内容', items: [
-                    {text: 'Flask', link: '/flask/introduce-web.html'},
+                    {text: 'Flask', link: '/flask/index.html'},
+                    {text: 'Pygame', link: '/pygame/index.html'},
                 ],
             },
         ],
@@ -176,5 +177,36 @@ function flaskSideBar() {
                 ],
             },
         ],
+        '/pygame/': [
+            {
+                text: 'Pygame中文文档',
+                items: [
+                    {text: 'pygame', link: '/pygame/pygame.html'},
+                    {text: 'BufferProxy', link: '/pygame/BufferProxy.html'},
+                    {text: 'camera', link: '/pygame/camera.html'},
+                    {text: 'cdrom', link: '/pygame/cdrom.html'},
+                    {text: 'Color', link: '/pygame/Color.html'},
+                    {text: 'cursors', link: '/pygame/cursors.html'},
+                    {text: 'display', link: '/pygame/BufferProxy.html'},
+                    {text: 'draw', link: '/pygame/draw.html'},
+                    {text: 'event', link: '/pygame/event.html'},
+                    {text: 'font', link: '/pygame/font.html'},
+                    {text: 'gfxdraw', link: '/pygame/gfxdraw.html'},
+                    {text: 'image', link: '/pygame/image.html'},
+                    {text: 'joystick', link: '/pygame/joystick.html'},
+                    {text: 'key', link: '/pygame/key.html'},
+                    {text: 'locals', link: '/pygame/locals.html'},
+                    {text: 'mask', link: '/pygame/mask.html'},
+                    {text: 'mixer', link: '/pygame/mixer.html'},
+                    {text: 'mouse', link: '/pygame/mouse.html'},
+                    {text: 'movie', link: '/pygame/movie.html'},
+                    {text: 'Overlay', link: '/pygame/Overlay.html'},
+                    {text: 'rect', link: '/pygame/rect.html'},
+                    {text: 'sndarray', link: '/pygame/sndarray.html'},
+                    {text: 'version', link: '/pygame/version.html'},
+
+
+                ]
+            }]
     };
 };

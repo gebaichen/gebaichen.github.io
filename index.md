@@ -14,7 +14,7 @@ hero:
       link: /posts.html
     - theme: alt slide-enter
       text: 关于此站
-      link: /about.html
+      link: /about.md
   image:
     src: /favicon.ico
     alt: QuqiNotes

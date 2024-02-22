@@ -89,7 +89,7 @@ const cut_page = (pageNum) => {
 
 .home-item.active {
   background: var(--vp-c-text-1);
-  color: var(--vp-c-text-inverse-1);
+  color: var(--vp-c-white);
   border: 1px solid var(--vp-c-text-1) !important;
 }
 
