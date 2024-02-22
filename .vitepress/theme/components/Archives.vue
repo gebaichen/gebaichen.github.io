@@ -28,4 +28,31 @@ const data = computed(() => useYearSort(theme.value.posts))
     font-size: 1.25rem;
     font-weight: 500;
 }
+/*tags and archives page style*/
+.posts {
+    padding: 4px 0 4px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-dot {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--vp-c-brand);
+}
+
+.post-container {
+    color: var(--vp-c-text-2);
+    font-size: 0.9375rem;
+    font-weight: 400;
+}
+
+.post-container:hover {
+    color: var(--vp-c-brand);
+}
 </style>

@@ -85,7 +85,7 @@ $ flask --app hello run --debug
 
 另见：
 
-- [开发服务器](/flask/flask-bushu.html) 和 [命令行接口](/flask/flask-cli.commmad.html) 包含有关调试模式运行的内容。
+- [开发服务器](/flask/flask-bushu.html) 和 [命令行接口](/flask/flask.cli.commmad.html) 包含有关调试模式运行的内容。
 
 ## HTML 转义
 当返回 HTML （ Flask 中的默认响应类型）时，为了防止注入攻击，所有用户 提供的值在输出渲染前必须被转义。使用 Jinja （这个稍后会介绍）渲染的 HTML 模板会自动执行此操作。
