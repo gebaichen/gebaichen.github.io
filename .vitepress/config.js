@@ -5,7 +5,7 @@ export default defineConfig({
     title: 'QuqiNotes',
     lang: 'zh',
     description: '一个文档网站',
-    outDir: "dist/dist",
+    outDir: "docs",
     lastUpdated: true,
     head: [['link', {rel: 'icon', href: '/logo.png'}]],
     themeConfig: {
