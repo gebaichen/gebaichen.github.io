@@ -200,12 +200,11 @@ function flaskSideBar() {
                     {text: 'mixer', link: '/pygame/mixer.html'},
                     {text: 'mouse', link: '/pygame/mouse.html'},
                     {text: 'movie', link: '/pygame/movie.html'},
+                    {text: 'music', link: '/pygame/music.html'},
                     {text: 'Overlay', link: '/pygame/Overlay.html'},
                     {text: 'rect', link: '/pygame/rect.html'},
                     {text: 'sndarray', link: '/pygame/sndarray.html'},
                     {text: 'version', link: '/pygame/version.html'},
-
-
                 ]
             }]
     };
