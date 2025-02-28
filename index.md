@@ -16,7 +16,7 @@ hero:
       text: 关于此站
       link: /about.md
   image:
-    src: /favicon.ico
+    src: /python.png
     alt: QuqiNotes
 features:
   - title: 励志谚语

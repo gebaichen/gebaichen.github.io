@@ -11,7 +11,7 @@ import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import Avatar from './components/Avatar.vue';
 import Login from './components/Login.vue';
-// import VPNavBar from './components/VPNavBar.vue';
+// import VPNavBar from './components/V                                                                                                            PNavBar.vue';
 export default {
     extends: Theme,
     Layout: () => {
